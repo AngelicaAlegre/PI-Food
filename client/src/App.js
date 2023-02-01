@@ -1,6 +1,6 @@
-import './App.css';
-import './index.css';
-import Layout from './pages/Layout';
+import "./App.css";
+import "./index.css";
+import Layout from "./pages/Layout";
 
 function App() {
   return (

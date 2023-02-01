@@ -29,7 +29,8 @@
 }
 
 div#layout{
-  background-image: url('./images/background/ingredients.png');
+  background-image: url('./images/background/recipes.jpg');
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
