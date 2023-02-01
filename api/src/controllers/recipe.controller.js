@@ -10,7 +10,7 @@ function getRecipes(req, res, next) {
     .then((dataAPI) => {
       // TENEMOS QUE PEDIR LOS DATOS DE LA BDD
       getRecipeDBInfo(req.query.name || null).then((dataDB) => {
-        res.status(200).send([...dataAPI.data.results, ...dataDB]);
+        res.status(200).send([...dataAPI, ...dataDB]);
       });
     })
     .catch((error) => {
