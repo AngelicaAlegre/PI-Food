@@ -9,7 +9,7 @@ const getApiInfo = async (url, query = "") => {
   try {
     const baseURL = `https://api.spoonacular.com/recipes/${url}?query=${query}&apiKey=${API_KEY}&addRecipeInformation=true&number=100`;
     const info = await axios.get(baseURL);
-    return info.dats.results.map((item) => ({
+    return info.data.results.map((item) => ({
       name: item.title,
       id: item.id,
       dishSummary: item.summary,

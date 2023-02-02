@@ -1,5 +1,5 @@
 import axios from "axios";
-import Home from "../pages/Home";
+import dataAPI from "../helpers/dataAPI";
 
 export const getRecipes = async() => {
     try {
@@ -10,4 +10,12 @@ export const getRecipes = async() => {
     }
 };
 
-export default Home;
+export const getRecipesFake = async() => {
+    try {
+        const information =  dataAPI;
+            return information;
+    } catch (error) {
+        console.log(error)
+    }
+};
+

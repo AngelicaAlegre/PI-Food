@@ -28,10 +28,14 @@
   color: #61dafb;
 }
 
-div#layout{
-  background-image: url('./images/background/recipes.jpg');
+body {
+  background-color: antiquewhite;
+}
+
+div#dashboard {
+  background-image: url("./images/background/recipes.jpg") !important;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

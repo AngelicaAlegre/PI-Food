@@ -1,0 +1,26 @@
+.pagination_container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  margin: 18px;
+}
+
+.pagination_button {
+  margin: 5px;
+  border: none;
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.pagination_button:hover {
+  background-color: rgb(143, 143, 12);
+}
