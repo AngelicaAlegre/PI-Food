@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Home from "./Home";
 import Navbar from "../components/Navbar";
+import New_Recipe from "../pages/New_Recipe";
 
 //Layout funciona como un contenedor. Dentro de este se van a renderizar todas nuestras paginas.
 // Layout contendra todas las rutas necesarias.
@@ -25,6 +26,9 @@ const Layout = () => {
         {/* La ruta HOME o "/" siempre deberia ir lo mas abajo del todo posible */}
         <Route exact path="/">
           <Dashboard />
+        </Route>
+        <Route exact path="/recipe">
+          <New_Recipe />
         </Route>
       </Switch>
     </div>

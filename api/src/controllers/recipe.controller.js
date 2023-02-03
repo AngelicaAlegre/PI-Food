@@ -5,12 +5,12 @@ const { getRecipeDBInfo, getRecipeIdDBInfo } = require("../controllers/getDBInfo
 
 function getRecipes(req, res, next) {
   // req.query.name
-  // Pido los datos de la API
+  // Pido los datos de la API.
   getApiInfo("complexSearch", req.query.name || "")
     .then((dataAPI) => {
-      // TENEMOS QUE PEDIR LOS DATOS DE LA BDD
+      // TENEMOS QUE PEDIR LOS DATOS DE LA BDD.
       getRecipeDBInfo(req.query.name || null).then((dataDB) => {
-        res.status(200).send([...dataAPI, ...dataDB]);
+        res.status(200).send([...dataDB, ...dataAPI]);
       });
     })
     .catch((error) => {
@@ -43,24 +43,25 @@ async function getRecipesById(req, res, next) {
 }
 
 async function postRecipes(req, res, next) {
-  // Agarramos todos las propiedades que nos pasan del frontEnd
-  const { name, dishSummary, healthScore, steps, typeDiet } = req.body;
+  // Agarramos todos las propiedades que nos pasan del frontEnd.
+  const { name, dishSummary, healthScore, steps, typeDiet, image } = req.body;
   try {
-    // Creamos una nueva receta
+    // Creamos una nueva receta.
     const recipeCreation = await Recipe.create({
       id: uuidv4(),
       name,
       dishSummary,
       healthScore,
       steps,
+      image,
     });
-    // Traer todas las dietas que coincidan con el nombre
+    // Traer todas las dietas que coincidan con el nombre.
     const createDiet = await Diet.findAll({
       where: {
         name: typeDiet,
       },
     });
-    // A la receta que creamos, le añadimos la dieta creada
+    // A la receta que creamos, le añadimos la dieta creada.
     await recipeCreation.addDiets(createDiet);
     res.status(200).json(recipeCreation);
     // recipeCreation.addDiets(createRecipe[0]);

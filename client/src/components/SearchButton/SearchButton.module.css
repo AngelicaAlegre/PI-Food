@@ -1,0 +1,18 @@
+.SearchButton_container{
+    margin: 20px;
+    margin-top: 10px;
+}
+
+.SearchButton_input{
+    padding: 10px;
+    border: none;
+    border: 1px solid rgb(55, 211, 73);
+    border-radius: 10px 0 0 10px;
+}
+
+.SearchButton_see{
+    padding: 10px;
+    border: none;
+    border: 1px solid rgb(6, 78, 8);
+    border-radius: 0 10px 10px 0;
+}

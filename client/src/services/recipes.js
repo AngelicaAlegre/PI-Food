@@ -18,4 +18,3 @@ export const getRecipesFake = async() => {
         console.log(error)
     }
 };
-
